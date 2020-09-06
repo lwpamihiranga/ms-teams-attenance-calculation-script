@@ -2,16 +2,28 @@
 # author: Amith Mihiranga
 import csv
 from datetime import datetime
+import codecs
 
 NAME_COLUMN_NAME = "Full Name"              
 ACTION_COLUMN_NAME = "Action"               
 TIMESTAMP_COLUMN_NAME = "Timestamp"         
 DURATION_COLUMN_NAME = "Duration"           
 TIMESTAMP_FORMAT = "%d/%m/%Y, %H:%M:%S"     # 18/08/2020, 18:57:55 --> Date/Month/Year, HH:MM:SS
-INPUT_FILE_NAME = "input.csv"
+INPUT_FILE_NAME = "sample.csv"
 OUTPUT_FILE_NAME_SUFFIX = "AttendanceResults.csv"
+READ_ENCODING_FORMAT = "utf-8"
 
-with open(INPUT_FILE_NAME, 'r') as file:
+user_given_file = input("Enter path to the input file, press enter to skip: ")
+if(len(user_given_file) != 0):
+    INPUT_FILE_NAME = user_given_file
+else:
+    print("You skipped entering a file path. There should be an input.csv file in the script directory with your data. Otherwise the script will fail!")
+
+# if input file contains null bytes the file need to be read in utf-16 encoding
+if '\0' in open(INPUT_FILE_NAME).read():
+    READ_ENCODING_FORMAT = 'utf-16'
+
+with codecs.open(INPUT_FILE_NAME, 'rU', READ_ENCODING_FORMAT) as file:
     reader = csv.DictReader(file, delimiter = '\t')
     index = 0
     rowList = []
