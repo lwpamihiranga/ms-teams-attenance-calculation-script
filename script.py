@@ -94,4 +94,4 @@ with open(result_filename, 'w', newline='') as result_csv_file:
     csvwriter.writeheader()
     csvwriter.writerows(resultList)
 
-print("Result file generated as ", result_filename)
+print("\nResult file generated as ", result_filename)
