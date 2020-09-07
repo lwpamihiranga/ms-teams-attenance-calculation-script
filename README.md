@@ -3,6 +3,8 @@
 By using this script you can calculate the duration a member stayed in a microsoft teams by using the downloaded attendee list file
 in microsoft teams. 
 
+[Click here to watch video demo](https://youtu.be/IVKiwC73FRs)
+
 Need to know how to download the attendee list? [Click here](https://support.microsoft.com/en-ie/office/download-attendance-reports-in-teams-ae7cf170-530c-47d3-84c1-3aedac74d310)
 
 ### Limitations and Things You Should Aware of
