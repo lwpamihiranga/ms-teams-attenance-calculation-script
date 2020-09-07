@@ -15,7 +15,7 @@ Need to know how to download the attendee list? [Click here](https://support.mic
 
 - The script will name the result file with a meaningful name in same folder where script is in. But it you want you can change the name also when prompt or you can simply skip by pressing enter.
 
-- The python version used is 3.8.3. This should work in >=8.3 without any error. There are some changes in the csv module that I have used in this script to read the file. But I think it should work in the previous versions as well. If you have a previous python version and any error occurs let me know after testing or feel free to open an issue.
+- The *python version* used is **3.8.3**. This should work in **>=8.3** without any error. There are some changes in the csv module that I have used in this script to read the file. But I think it should work in the previous versions as well. If you have a previous python version and any error occurs let me know after testing or feel free to open an issue.
 
 - The timestamps formats are used according to the `"%d/%m/%Y, %H:%M:%S"     # 18/08/2020, 18:57:55 --> Date/Month/Year, HH:MM:SS` format. If there's any change it can be configured easily. You can easily find the format in the top of the script.
 
